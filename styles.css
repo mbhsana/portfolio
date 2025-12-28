@@ -1,0 +1,722 @@
+/* Color Variables */
+:root {
+    --dauphine-blue: #0056A4;
+    --nanterre-red: #D71920;
+    --light-blue: #E8F4F8;
+    --light-red: #FFF0F0;
+    --dark-gray: #2C3E50;
+    --medium-gray: #7F8C8D;
+    --light-gray: #ECF0F1;
+    --white: #FFFFFF;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-red) 100%);
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--dauphine-blue) 0%, var(--nanterre-red) 100%);
+    color: var(--white);
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.language-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.language-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-toggle:active {
+    transform: scale(0.98);
+}
+
+.lang-text {
+    display: inline-block;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.orcid {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.orcid a {
+    color: var(--white);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.orcid a:hover {
+    opacity: 0.8;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: var(--dauphine-blue);
+    background-color: var(--light-blue);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--dauphine-blue), var(--nanterre-red));
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--dauphine-blue);
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid var(--nanterre-red);
+    display: inline-block;
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--nanterre-red);
+}
+
+.content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content ul li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--light-blue) 0%, var(--white) 50%, var(--light-red) 100%);
+    border-left: 4px solid var(--dauphine-blue);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.content ul li::before {
+    content: '▶';
+    position: absolute;
+    left: 0.8rem;
+    color: var(--nanterre-red);
+    font-size: 0.8rem;
+}
+
+.content ul li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left-width: 6px;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--dauphine-blue);
+    font-weight: 600;
+}
+
+/* Links in content */
+.content a {
+    color: var(--dauphine-blue);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.content a:hover {
+    color: var(--nanterre-red);
+    border-bottom-color: var(--nanterre-red);
+}
+
+/* Book Item Styles */
+.book-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-red) 100%);
+    border-radius: 10px;
+    border: 2px solid var(--dauphine-blue);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--white);
+    display: block;
+}
+
+.book-cover-placeholder {
+    width: 200px;
+    height: 260px;
+    background: linear-gradient(135deg, var(--dauphine-blue) 0%, var(--nanterre-red) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-details {
+    flex: 1;
+}
+
+.book-details h4 {
+    font-size: 1.5rem;
+    color: var(--dauphine-blue);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.book-details p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.book-details p strong {
+    color: var(--nanterre-red);
+    font-weight: 600;
+}
+
+.book-chapters {
+    margin-top: 1rem;
+}
+
+.book-chapters ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+
+}
+
+.book-chapters ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-left: 3px solid var(--nanterre-red);
+    border-radius: 4px;
+    line-height: 1.6;
+}
+
+.book-chapters ul li strong {
+    color: var(--dauphine-blue);
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+/* Publication List Styles */
+.publication-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.publication-list li {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--light-blue) 0%, var(--white) 100%);
+    border-left: 4px solid var(--dauphine-blue);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    line-height: 1.7;
+}
+
+.publication-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left-width: 6px;
+}
+
+.publication-list li strong {
+    color: var(--dauphine-blue);
+    font-weight: 600;
+}
+
+.publication-list li em {
+    color: var(--medium-gray);
+    font-style: italic;
+}
+
+.publication-list li a {
+    color: var(--dauphine-blue);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.publication-list li a:hover {
+    color: var(--nanterre-red);
+    border-bottom-color: var(--nanterre-red);
+}
+
+/* Publication Links Section */
+.publication-links {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-red) 100%);
+    border-radius: 8px;
+    border: 2px solid var(--dauphine-blue);
+}
+
+.publication-links p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.publication-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.publication-links ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.publication-links ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--nanterre-red);
+    font-weight: bold;
+}
+
+/* Course List Styles */
+.course-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-list li {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--white) 0%, var(--light-red) 100%);
+    border-left: 4px solid var(--nanterre-red);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    line-height: 1.7;
+}
+
+.course-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left-width: 6px;
+}
+
+.course-list li strong {
+    color: var(--nanterre-red);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.course-platform {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-red) 100%);
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--dauphine-blue);
+    margin: 1.5rem 0;
+}
+
+/* PhD List Styles */
+.phd-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.phd-list li {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--light-blue) 0%, var(--white) 50%, var(--light-red) 100%);
+    border-left: 4px solid var(--dauphine-blue);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    line-height: 1.7;
+}
+
+.phd-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left-width: 6px;
+}
+
+.phd-list li strong {
+    color: var(--dauphine-blue);
+    font-weight: 600;
+}
+
+/* Contact Section Specific Styles */
+#contact .contact-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-red) 100%);
+    border-radius: 8px;
+    border: 2px solid var(--dauphine-blue);
+}
+
+#contact .contact-item:last-child {
+    margin-bottom: 0;
+}
+
+#contact .contact-item h3 {
+    color: var(--dauphine-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#contact .contact-item p {
+    margin-bottom: 0.5rem;
+    color: var(--dark-gray);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, var(--dauphine-blue) 0%, var(--nanterre-red) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: underline;
+    margin: 0 1rem;
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .language-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-width: 4px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card h4 {
+        font-size: 1.1rem;
+    }
+
+    .publication-list li,
+    .course-list li,
+    .phd-list li {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .book-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .book-cover-container {
+        width: 180px;
+    }
+
+    .book-cover-placeholder {
+        width: 180px;
+        height: 234px;
+        font-size: 3.5rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-toggle {
+        top: 0.3rem;
+        right: 0.3rem;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        border-width: 3px;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .content ul li {
+        padding: 0.8rem;
+        padding-left: 1.5rem;
+    }
+
+    .publication-list li,
+    .course-list li,
+    .phd-list li {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card h4 {
+        font-size: 1rem;
+    }
+
+    .book-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .book-cover-container {
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .book-cover-placeholder {
+        width: 150px;
+        height: 195px;
+        font-size: 3rem;
+    }
+
+    .book-details h4 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--nanterre-red);
+    color: var(--white);
+}
+
+::-moz-selection {
+    background-color: var(--nanterre-red);
+    color: var(--white);
+}
+
