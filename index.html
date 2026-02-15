@@ -1,260 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sana Ben Hamida - Academic Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">SBH<span class="dot">.</span></a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link" data-en="About" data-fr="À propos">About</a></li>
+                    <li><a href="#research" class="nav-link" data-en="Research" data-fr="Recherche">Research</a></li>
+                    <li><a href="#publications" class="nav-link" data-en="Publications"
+                            data-fr="Publications">Publications</a></li>
+                    <li><a href="#tutorials" class="nav-link" data-en="Tutorials" data-fr="Tutoriaux">Tutorials</a></li>
+                    <li><a href="#teaching" class="nav-link" data-en="Teaching" data-fr="Enseignement">Teaching</a></li>
+                    <li><a href="#contact" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a></li>
+                </ul>
+            </nav>
+
             <button class="language-toggle" id="languageToggle" aria-label="Switch language">
+                <i class="fas fa-globe"></i>
                 <span class="lang-text" data-en="FR" data-fr="EN">FR</span>
             </button>
-            <img src="Sana-Ben-Hamida-2.jpg.webp" alt="Sana Ben Hamida" class="profile-picture">
-            <h1 data-en="Sana Ben Hamida" data-fr="Sana Ben Hamida">Sana Ben Hamida</h1>
-            <p class="subtitle" data-en="Associate Professor (HDR) in Computer Science" data-fr="Maître de Conférences Hors Classe (HDR) en Informatique">Associate Professor (HDR) in Computer Science</p>
-            <p class="orcid">ORCID: <a href="https://orcid.org/0000-0003-4202-613X" target="_blank" rel="noopener noreferrer">0000-0003-4202-613X</a></p>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
-            <li><a href="#research" data-en="Research" data-fr="Recherche">Research</a></li>
-            <li><a href="#publications" data-en="Publications" data-fr="Publications">Publications</a></li>
-            <li><a href="#tutorials" data-en="Tutorials" data-fr="Tutoriaux">Tutorials</a></li>
-            <li><a href="#teaching" data-en="Teaching" data-fr="Enseignement">Teaching</a></li>
-            <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
-        </ul>
-    </nav>
+    <section id="hero" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <span class="greeting" data-en="Hello, I am" data-fr="Bonjour, je suis">Hello, I am</span>
+                <h1 data-en="Sana Ben Hamida" data-fr="Sana Ben Hamida">Sana Ben Hamida</h1>
+                <h2 class="subtitle" data-en="Associate Professor (HDR) in Computer Science"
+                    data-fr="Maître de Conférences Hors Classe (HDR) en Informatique">Associate Professor (HDR) in
+                    Computer Science</h2>
+                <div class="orcid-badge">
+                    <i class="fab fa-orcid"></i>
+                    <span>ORCID: <a href="https://orcid.org/0000-0003-4202-613X" target="_blank"
+                            rel="noopener noreferrer">0000-0003-4202-613X</a></span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary" data-en="Contact Me" data-fr="Me Contacter">Contact
+                        Me</a>
+                    <a href="#research" class="btn btn-secondary" data-en="My Research" data-fr="Ma Recherche">My
+                        Research</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in-up delay-200">
+                <div class="image-wrapper">
+                    <img src="Sana-Ben-Hamida-2.jpg.webp" alt="Sana Ben Hamida" class="profile-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
 
     <main>
-        <section id="about" class="card">
-            <h2 data-en="About" data-fr="À propos">About</h2>
-            <div class="content">
-                <p data-en="Associate Professor (HDR) in Computer Science at the Department of Mathematics and Computer Science, UFR SEGMI, Université Paris Nanterre, UPL." data-fr="Maître de Conférences Hors Classe (HDR) en Informatique au département Mathématique et Informatique, UFR SEGMI, Université Paris Nanterre, UPL.">Associate Professor (HDR) in Computer Science at the Department of Mathematics and Computer Science, UFR SEGMI, Université Paris Nanterre, UPL.</p>
-                <p data-en="Associate member of the Laboratory of Analysis and Modeling of Systems for Decision Support (LAMSADE), UMR CNRS 7243, Université Paris Dauphine, PSL." data-fr="Membre associée au Laboratoire d'Analyse et Modélisation de Systèmes pour l'Aide à la Décision (LAMSADE), UMR CNRS 7243, Université Paris Dauphine, PSL.">Associate member of the Laboratory of Analysis and Modeling of Systems for Decision Support (LAMSADE), UMR CNRS 7243, Université Paris Dauphine, PSL.</p>
-            </div>
-        </section>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-subtitle" data-en="Discover" data-fr="Découvrir">Discover</span>
+                    <h2 class="section-title" data-en="About Me" data-fr="À Propos">About Me</h2>
+                </div>
+                <div class="content card fade-in-up">
+                    <p class="lead-text"
+                        data-en="Associate Professor (HDR) in Computer Science at the Department of Mathematics and Computer Science, UFR SEGMI, Université Paris Nanterre, UPL."
+                        data-fr="Maître de Conférences Hors Classe (HDR) en Informatique au département Mathématique et Informatique, UFR SEGMI, Université Paris Nanterre, UPL.">
+                        Associate Professor (HDR) in Computer Science at the Department of Mathematics and Computer
+                        Science, UFR SEGMI, Université Paris Nanterre, UPL.</p>
+                    <p data-en="Associate member of the Laboratory of Analysis and Modeling of Systems for Decision Support (LAMSADE), UMR CNRS 7243, Université Paris Dauphine, PSL."
+                        data-fr="Membre associée au Laboratoire d'Analyse et Modélisation de Systèmes pour l'Aide à la Décision (LAMSADE), UMR CNRS 7243, Université Paris Dauphine, PSL.">
+                        Associate member of the Laboratory of Analysis and Modeling of Systems for Decision Support
+                        (LAMSADE), UMR CNRS 7243, Université Paris Dauphine, PSL.</p>
 
-        <section id="research" class="card">
-            <h2 data-en="Research" data-fr="Recherche">Research</h2>
-            <div class="content">
-                <h3 data-en="Affiliation" data-fr="Affiliation">Affiliation</h3>
-                <p data-en="Member of the &quot;Data Science&quot; team at the Laboratory of Analysis and Modeling of Systems for Decision Support (LAMSADE) at Université Paris Dauphine." data-fr="Membre de l'équipe &quot;Data Science&quot; au Laboratoire d'Analyse et Modélisation de Systèmes pour l'Aide à la Décision (LAMSADE) de l'Université Paris Dauphine.">Member of the "Data Science" team at the Laboratory of Analysis and Modeling of Systems for Decision Support (LAMSADE) at Université Paris Dauphine.</p>
-
-                <h3 data-en="Research Axes" data-fr="Axes de recherche">Research Axes</h3>
-                <h4 data-en="Evolutionary Algorithms (EA): Application to Machine Learning" data-fr="Algorithmes Évolutionnaires (AE): Application au Machine Learning">Evolutionary Algorithms (EA): Application to Machine Learning</h4>
-                <ul>
-                    <li data-en="EA for Time Series Regression - Application to Financial Market Volatility Prediction" data-fr="AE pour la régression des séries temporelles - application à la prédiction de la volatilité des marchés financiers">EA for Time Series Regression - Application to Financial Market Volatility Prediction</li>
-                    <li data-en="EA for Massive Data Classification: Scaling Genetic Programming" data-fr="AE pour la classification des données massives : mise à l'échelle des programmes génétiques">EA for Massive Data Classification: Scaling Genetic Programming</li>
-                    <li data-en="EA for Clustering and Community Detection: Application in Gene Networks" data-fr="AE pour le clustering et la détection des communautés : application dans les réseaux de gènes">EA for Clustering and Community Detection: Application in Gene Networks</li>
-                </ul>
-
-                <h4 data-en="Application of EAs for Solving Difficult Numerical Problems" data-fr="Application des AE pour résoudre des problèmes numériques difficiles">Application of EAs for Solving Difficult Numerical Problems</h4>
-                <ul>
-                    <li data-en="EA for Model Calibration in Finance" data-fr="AE pour la calibration de modèles en finance">EA for Model Calibration in Finance</li>
-                    <li data-en="EA for Difficult Combinatorial Optimization: Vehicle Routing Problems (VRP), Scheduling of Intensive Scientific Workflows (WS) in Cloud Environment" data-fr="AE pour l'optimisation combinatoire difficile : Problèmes de routage de véhicules (VRP), Planification de workflows scientifiques intensifs (WS) dans l'environnement Cloud">EA for Difficult Combinatorial Optimization: Vehicle Routing Problems (VRP), Scheduling of Intensive Scientific Workflows (WS) in Cloud Environment</li>
-                </ul>
-
-                <h3 data-en="PhD Co-Supervision" data-fr="Co-encadrement de thèses">PhD Co-Supervision</h3>
-                <ul class="phd-list">
-                    <li><strong>Houria Braikia</strong> - <span data-en="&quot;Prediction of Marine Biodiversity Levels Based on Hybrid Evolutionary Learning Techniques Applied to Environmental DNA&quot; (started September 2022), co-supervised with Prof. Marta Rukoz (LAMSADE)" data-fr="&quot;Prédiction des niveaux de biodiversité marine basée sur des techniques d'apprentissage évolutionnaire hybrides appliquées à l'ADN environnemental&quot; (démarré en septembre 2022), co-encadrée avec Prof. Marta Rukoz (LAMSADE)">"Prediction of Marine Biodiversity Levels Based on Hybrid Evolutionary Learning Techniques Applied to Environmental DNA" (started September 2022), co-supervised with Prof. Marta Rukoz (LAMSADE)</span></li>
-                    <li><strong>Marwa Ben M'Barek</strong> - <span data-en="&quot;Genetic Algorithms for Gene Community Detection&quot; (2018-2022), co-supervised with Prof. Marta Rukoz (LAMSADE) and Prof. Amel Borgi (LIPAH - Tunis El Manar)" data-fr="&quot;Algorithmes génétiques pour la détection de communautés de gènes&quot; (2018-2022), co-encadrée avec Prof. Marta Rukoz (LAMSADE) et Prof. Amel Borgi (LIPAH - Tunis El Manar)">"Genetic Algorithms for Gene Community Detection" (2018-2022), co-supervised with Prof. Marta Rukoz (LAMSADE) and Prof. Amel Borgi (LIPAH - Tunis El Manar)</span></li>
-                    <li><strong>Hmida Hmida</strong> - <span data-en="&quot;Extension of Genetic Programming for Supervised Learning from Very Large Databases (Big Data)&quot; (2016-2019), co-supervised with Marta Rukoz (LAMSADE) and Amel Borgi (LIPAH - Tunis El Manar)" data-fr="&quot;Extension de la programmation génétique pour l'apprentissage supervisé à partir de très grandes bases de données (Big Data)&quot; (2016-2019), co-encadré avec Marta Rukoz (LAMSADE) et Amel Borgi (LIPAH - Tunis El Manar)">"Extension of Genetic Programming for Supervised Learning from Very Large Databases (Big Data)" (2016-2019), co-supervised with Marta Rukoz (LAMSADE) and Amel Borgi (LIPAH - Tunis El Manar)</span></li>
-                    <li><strong>Wafa Abdelmalek</strong> - <span data-en="&quot;Prediction of Implied Volatility by Genetic Programming&quot; (2007-2011), co-supervised with Prof. Fethi Abid (MODESFI, FSEG Sfax)" data-fr="&quot;Prédiction de la volatilité implicite par programmation génétique&quot; (2007-2011), co-encadrée avec Prof. Fethi Abid (MODESFI, FSEG Sfax)">"Prediction of Implied Volatility by Genetic Programming" (2007-2011), co-supervised with Prof. Fethi Abid (MODESFI, FSEG Sfax)</span></li>
-                </ul>
-
-                <h3 data-en="Review Committees" data-fr="Comités de relecture">Review Committees</h3>
-                <ul>
-                    <li data-en="Since 2021: International Journal of Applied Intelligence (Springer)" data-fr="Depuis 2021 : International Journal of Applied Intelligence (Springer)">Since 2021: International Journal of Applied Intelligence (Springer)</li>
-                    <li data-en="Since 2021: The International Conference on Information and Knowledge Systems (ICIKS 2021 - ICIKS 2023)" data-fr="Depuis 2021 : The International Conference on Information and Knowledge Systems (ICIKS 2021 - ICIKS 2023)">Since 2021: The International Conference on Information and Knowledge Systems (ICIKS 2021 - ICIKS 2023)</li>
-                    <li data-en="2020: International Journal of Expert Systems With Applications (Springer)" data-fr="2020 : International Journal of Expert Systems With Applications (Springer)">2020: International Journal of Expert Systems With Applications (Springer)</li>
-                    <li data-en="2005-2008: Journal International of Quantitative Finance (Taylor &amp; Francis Group)" data-fr="2005-2008 : Journal International of Quantitative Finance (Taylor &amp; Francis Group)">2005-2008: Journal International of Quantitative Finance (Taylor & Francis Group)</li>
-                    <li data-en="2005-2007: International Journal of Evolutionary Computation (MIT Press)" data-fr="2005-2007 : International Journal of Evolutionary Computation (MIT Press)">2005-2007: International Journal of Evolutionary Computation (MIT Press)</li>
-                    <li data-en="2017: The International Conference of Artificial Evolution, October 2017, Paris" data-fr="2017 : The International Conference of Artificial Evolution, octobre 2017, Paris">2017: The International Conference of Artificial Evolution, October 2017, Paris</li>
-                    <li data-en="2016: Workshop on High Performance Big Data Computing (Held in Conjunction With The IEEE Smart World Congress)" data-fr="2016 : Workshop on High Performance Big Data Computing (tenu en conjonction avec le IEEE Smart World Congress)">2016: Workshop on High Performance Big Data Computing (Held in Conjunction With The IEEE Smart World Congress)</li>
-                    <li data-en="2004: The International Conference PPSN VIII - The 8th International Conference on Parallel Problem Solving from Nature, Birmingham, UK" data-fr="2004 : The International Conference PPSN VIII - The 8th International Conference on Parallel Problem Solving from Nature, Birmingham, UK">2004: The International Conference PPSN VIII - The 8th International Conference on Parallel Problem Solving from Nature, Birmingham, UK</li>
-                    <li data-en="2002: The International Conference PPSN VII - The 7th International Conference on Parallel Problem Solving from Nature, Granada" data-fr="2002 : The International Conference PPSN VII - The 7th International Conference on Parallel Problem Solving from Nature, Grenade">2002: The International Conference PPSN VII - The 7th International Conference on Parallel Problem Solving from Nature, Granada</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="publications" class="card">
-            <h2 data-en="Publications" data-fr="Publications">Publications</h2>
-            <div class="content">
-                <h3 data-en="Books and Book Chapters" data-fr="Livre et chapitres d'ouvrages">Books and Book Chapters</h3>
-                
-                <div class="book-item">
-                    <div class="book-cover-container">
-                        <img src="unnamed-2.jpg" alt="Evolutionary Algorithms Book Cover" class="book-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="book-cover-placeholder" style="display:none;">
-                            <span>📚</span>
+                    <div class="affiliations">
+                        <div class="affiliation-item">
+                            <i class="fas fa-university"></i>
+                            <span data-en="Université Paris Nanterre" data-fr="Université Paris Nanterre">Université
+                                Paris Nanterre</span>
+                        </div>
+                        <div class="affiliation-item">
+                            <i class="fas fa-atom"></i>
+                            <span data-en="LAMSADE - CNRS" data-fr="LAMSADE - CNRS">LAMSADE - CNRS</span>
                         </div>
                     </div>
-                    <div class="book-details">
-                        <h4>Evolutionary Algorithms</h4>
-                        <p><strong data-en="Authors:" data-fr="Auteurs:">Authors:</strong> Alain Petrowski, Sana Ben-Hamida</p>
-                        <p><strong data-en="Publisher:" data-fr="Éditeur:">Publisher:</strong> Metaheuristics Set, Wiley-ISTE, 2017</p>
-                        <p><strong>ISBN:</strong> 978-1-84821-804-8</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section bg-light">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-subtitle" data-en="Explore" data-fr="Explorer">Explore</span>
+                    <h2 class="section-title" data-en="Research" data-fr="Recherche">Research</h2>
+                </div>
+
+                <div class="info-card mb-large fade-in-up">
+                    <h3 data-en="Affiliation" data-fr="Affiliation">Affiliation</h3>
+                    <p data-en="Member of the &quot;Data Science&quot; team at the Laboratory of Analysis and Modeling of Systems for Decision Support (LAMSADE) at Université Paris Dauphine."
+                        data-fr="Membre de l'équipe &quot;Data Science&quot; au Laboratoire d'Analyse et Modélisation de Systèmes pour l'Aide à la Décision (LAMSADE) de l'Université Paris Dauphine.">
+                        Member of the "Data Science" team at the Laboratory of Analysis and Modeling of Systems for
+                        Decision Support (LAMSADE) at Université Paris Dauphine.</p>
+                </div>
+
+                <div class="research-grid">
+                    <div class="research-col fade-in-up">
+                        <h3 class="subsection-title">
+                            <i class="fas fa-dna"></i>
+                            <span data-en="Evolutionary Algorithms" data-fr="Algorithmes Évolutionnaires">Evolutionary
+                                Algorithms</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chart-line"></i> <span
+                                    data-en="Time Series Regression & Financial Volatility"
+                                    data-fr="Régression des séries temporelles & Volatilité financière">Time Series
+                                    Regression & Financial Volatility</span></li>
+                            <li><i class="fas fa-database"></i> <span data-en="Massive Data Classification"
+                                    data-fr="Classification des données massives">Massive Data Classification</span>
+                            </li>
+                            <li><i class="fas fa-project-diagram"></i> <span
+                                    data-en="Clustering & Community Detection (Gene Networks)"
+                                    data-fr="Clustering & Détection de communautés (Réseaux de gènes)">Clustering &
+                                    Community Detection (Gene Networks)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="research-col fade-in-up delay-200">
+                        <h3 class="subsection-title">
+                            <i class="fas fa-calculator"></i>
+                            <span data-en="Numerical Problems" data-fr="Problèmes Numériques">Numerical Problems</span>
+                        </h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-balance-scale"></i> <span data-en="Model Calibration in Finance"
+                                    data-fr="Calibration de modèles en finance">Model Calibration in Finance</span></li>
+                            <li><i class="fas fa-truck"></i> <span data-en="Combinatorial Optimization (VRP)"
+                                    data-fr="Optimisation Combinatoire (VRP)">Combinatorial Optimization (VRP)</span>
+                            </li>
+                            <li><i class="fas fa-cloud"></i> <span data-en="Scheduling Workflows in Cloud"
+                                    data-fr="Planification de workflows dans le Cloud">Scheduling Workflows in
+                                    Cloud</span></li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="book-item">
-                    <div class="book-cover-container">
-                        <img src="unnamed-3.jpg" alt="Metaheuristics Book Cover" class="book-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="book-cover-placeholder" style="display:none;">
-                            <span>📚</span>
+                <div class="supervision-section mt-large fade-in-up">
+                    <h3 class="subsection-title centered" data-en="PhD Co-Supervision"
+                        data-fr="Co-encadrement de thèses">PhD Co-Supervision</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Houria Braikia</h4>
+                                <span class="date">2022 - Present</span>
+                                <p data-en="&quot;Prediction of Marine Biodiversity Levels Based on Hybrid Evolutionary Learning Techniques Applied to Environmental DNA&quot;"
+                                    data-fr="&quot;Prédiction des niveaux de biodiversité marine basée sur des techniques d'apprentissage évolutionnaire hybrides appliquées à l'ADN environnemental&quot;">
+                                    "Prediction of Marine Biodiversity Levels"</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Marwa Ben M'Barek</h4>
+                                <span class="date">2018 - 2022</span>
+                                <p data-en="&quot;Genetic Algorithms for Gene Community Detection&quot;"
+                                    data-fr="&quot;Algorithmes génétiques pour la détection de communautés de gènes&quot;">
+                                    "Genetic Algorithms for Gene Community Detection"</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Hmida Hmida</h4>
+                                <span class="date">2016 - 2019</span>
+                                <p data-en="&quot;Extension of Genetic Programming for Supervised Learning from Very Large Databases&quot;"
+                                    data-fr="&quot;Extension de la programmation génétique pour l'apprentissage supervisé à partir de très grandes bases de données&quot;">
+                                    "Extension of Genetic Programming for Supervised Learning"</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Wafa Abdelmalek</h4>
+                                <span class="date">2007 - 2011</span>
+                                <p data-en="&quot;Prediction of Implied Volatility by Genetic Programming&quot;"
+                                    data-fr="&quot;Prédiction de la volatilité implicite par programmation génétique&quot;">
+                                    "Prediction of Implied Volatility by Genetic Programming"</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="book-details">
-                        <h4>Metaheuristics</h4>
-                        <p><strong data-en="Editor:" data-fr="Éditeur:">Editor:</strong> Patrick Siarry</p>
-                        <p><strong data-en="Publisher:" data-fr="Éditeur:">Publisher:</strong> Springer, Cham, 2016</p>
-                        <div class="book-chapters">
-                            <p><strong data-en="Contributions by Sana Ben Hamida:" data-fr="Contributions de Sana Ben Hamida :">Contributions by Sana Ben Hamida:</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-subtitle" data-en="Library" data-fr="Bibliothèque">Library</span>
+                    <h2 class="section-title" data-en="Publications" data-fr="Publications">Publications</h2>
+                </div>
+
+                <div class="books-grid">
+                    <div class="book-card fade-in-up">
+                        <div class="book-cover">
+                            <img src="unnamed-2.jpg" alt="Evolutionary Algorithms"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="book-placeholder" style="display:none;"><i class="fas fa-book"></i></div>
+                        </div>
+                        <div class="book-info">
+                            <h4>Evolutionary Algorithms</h4>
+                            <p class="citation">Alain Petrowski, Sana Ben-Hamida</p>
+                            <p class="publisher">Wiley-ISTE, 2017</p>
+                        </div>
+                    </div>
+
+                    <div class="book-card fade-in-up delay-200">
+                        <div class="book-cover">
+                            <img src="unnamed-3.jpg" alt="Metaheuristics"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="book-placeholder" style="display:none;"><i class="fas fa-book"></i></div>
+                        </div>
+                        <div class="book-info">
+                            <h4>Metaheuristics</h4>
+                            <p class="citation">Editor: Patrick Siarry</p>
+                            <p class="publisher">Springer, Cham, 2016</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publications-list-container fade-in-up">
+                    <h3 class="subsection-title" data-en="Recent Papers" data-fr="Articles Récents">Recent Papers</h3>
+                    <ul class="pub-list">
+                        <li>
+                            <i class="far fa-file-alt"></i>
+                            <div>
+                                <strong>Ben Hamida S., Hmida H., Borgi A., Rukoz M.</strong> (2021)
+                                <a href="https://scholar.google.com/scholar?q=Adaptive+sampling+for+active+learning+with+genetic+programming+Sana+Ben+Hamida"
+                                    target="_blank">Adaptive sampling for active learning with genetic programming</a>.
+                                <span class="journal">Cognitive Systems Research</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="far fa-file-alt"></i>
+                            <div>
+                                <strong>Ben Hamida S., Benjelloun G., Hmida H.</strong> (2021)
+                                <a href="https://scholar.google.com/scholar?q=Trends+of+Evolutionary+Machine+Learning+to+Address+Big+Data+Mining+Sana+Ben+Hamida"
+                                    target="_blank">Trends of Evolutionary Machine Learning to Address Big Data
+                                    Mining</a>.
+                                <span class="journal">Springer</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="far fa-file-alt"></i>
+                            <div>
+                                <strong>Ben M'barek M., Ben Hamida S., Borgi A., Rukoz M.</strong> (2021)
+                                <a href="https://scholar.google.com/scholar?q=GA-PPI-Net+Approach+vs+Analytical+Approaches+for+Community+Detection+in+PPI+Networks"
+                                    target="_blank">GA-PPI-Net Approach vs Analytical Approaches for Community Detection
+                                    in PPI Networks</a>.
+                                <span class="journal">Procedia Computer Science</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="far fa-file-alt"></i>
+                            <div>
+                                <strong>Ben Hamida S., Benjelloun G.</strong> (2021)
+                                <a href="https://scholar.google.com/scholar?q=Extending+DEAP+with+Active+Sampling+for+Evolutionary+Supervised+Learning+Sana+Ben+Hamida"
+                                    target="_blank">Extending DEAP with Active Sampling for Evolutionary Supervised
+                                    Learning</a>.
+                                <span class="journal">ICSOFT 2021</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tutorials" class="section bg-light">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-subtitle" data-en="Knowledge" data-fr="Connaissance">Knowledge</span>
+                    <h2 class="section-title" data-en="Tutorials" data-fr="Tutoriaux">Tutorials</h2>
+                </div>
+
+                <div class="tutorials-grid">
+                    <div class="tutorial-card fade-in-up">
+                        <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h3 data-en="Doctoral Course" data-fr="Cours Doctorales">Doctoral Course</h3>
+                        <p class="location">LAMSADE 2019</p>
+                        <ul class="chapter-list">
+                            <li><a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s"
+                                    target="_blank"><span data-en="Basics of EA" data-fr="Bases des AE">Basics of
+                                        EA</span> <i class="fas fa-external-link-alt"></i></a></li>
+                            <li><a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s"
+                                    target="_blank"><span data-en="Continuous EA" data-fr="AE Continus">Continuous
+                                        EA</span> <i class="fas fa-external-link-alt"></i></a></li>
+                            <li><a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s"
+                                    target="_blank"><span data-en="Multi-objective Optimization"
+                                        data-fr="Optimisation Multi-objectif">Multi-objective Optimization</span> <i
+                                        class="fas fa-external-link-alt"></i></a></li>
+                            <li><a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s"
+                                    target="_blank"><span data-en="Combinatorial Optimization"
+                                        data-fr="Optimisation Combinatoire">Combinatorial Optimization</span> <i
+                                        class="fas fa-external-link-alt"></i></a></li>
+                            <li><a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s"
+                                    target="_blank"><span data-en="Genetic Programming"
+                                        data-fr="Programmation Génétique">Genetic Programming</span> <i
+                                        class="fas fa-external-link-alt"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tutorial-card fade-in-up delay-100">
+                        <div class="card-icon"><i class="fas fa-presentation"></i></div>
+                        <h3 data-en="Invited Talks" data-fr="Conférences Invitées">Invited Talks</h3>
+                        <p class="location">Doctoriales LIPAH 2018</p>
+                        <div class="talk-content">
+                            <p data-en="Genetic Programming for Machine Learning: Principles and Example of Application to Symbolic Regression in Finance"
+                                data-fr="La programmation génétique pour l'apprentissage automatique: principes et exemple d'application à la régression symbolique en finance">
+                                Genetic Programming for Machine Learning: Principles and Example of Application to
+                                Symbolic Regression in Finance</p>
+                            <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s"
+                                target="_blank" class="btn-text">View Slides <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching" class="section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="section-subtitle" data-en="Education" data-fr="Éducation">Education</span>
+                    <h2 class="section-title" data-en="Teaching" data-fr="Enseignement">Teaching</h2>
+                </div>
+
+                <div class="teaching-alert fade-in-up">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong data-en="Student Note:" data-fr="Note aux étudiants :">Student Note:</strong>
+                        <span data-en="All materials are available on" data-fr="Tous les supports sont sur">All
+                            materials are available on</span>
+                        <a href="https://coursenligne.parisnanterre.fr/"
+                            target="_blank">coursenligne.parisnanterre.fr</a>
+                    </div>
+                </div>
+
+                <div class="teaching-accordion fade-in-up">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 data-en="Master Data Science (D3S-IES)" data-fr="Master Data Science (D3S-IES)">Master
+                                Data Science (D3S-IES)</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
                             <ul>
-                                <li><strong>Ben Hamida S.</strong> Extension of Evolutionary Algorithms to Constrained Optimization (pp. 329-356)</li>
-                                <li><strong>Petrowski A., Ben Hamida S.</strong> Evolutionary Algorithms</li>
+                                <li>
+                                    <strong data-en="Advanced Machine Learning"
+                                        data-fr="Approfondissement en Machine Learning">Advanced Machine
+                                        Learning</strong>
+                                    <p data-en="Data cleaning, reduction, transformation, Ensemble Learning, SVMs, etc."
+                                        data-fr="Data cleaning, reduction, transformation, Ensemble Learning, SVMs, etc.">
+                                        Data cleaning, reduction, transformation, Ensemble Learning, SVMs, etc.</p>
+                                </li>
+                                <li>
+                                    <strong data-en="Advanced Databases" data-fr="Base de Données Avancées">Advanced
+                                        Databases</strong>
+                                    <p data-en="Advanced SQL, Data Analysis, Optimization, Indexing"
+                                        data-fr="SQL Avancé, Analyse des données, Optimisation, Indexation">Advanced
+                                        SQL, Data Analysis, Optimization, Indexing</p>
+                                </li>
+                                <li>
+                                    <strong data-en="NoSQL Databases" data-fr="Base de Données NoSQL">NoSQL
+                                        Databases</strong>
+                                    <p data-en="MongoDB, Graph Databases, Neo4j" data-fr="MongoDB, BD Graphes, Neo4j">
+                                        MongoDB, Graph Databases, Neo4j</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 data-en="Master MIAGE" data-fr="Master MIAGE">Master MIAGE</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <strong data-en="Application of Machine Learning"
+                                        data-fr="Application du Machine Learning">Application of Machine
+                                        Learning</strong>
+                                    <p data-en="Supervised/Unsupervised Learning, Classification, Regression, Clustering"
+                                        data-fr="Apprentissage supervisé/non supervisé, Classification, Régression, Clustering">
+                                        Supervised/Unsupervised Learning, Classification, Regression, Clustering</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 data-en="Master APE" data-fr="Master APE">Master APE</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-body">
+                            <ul>
+                                <li>
+                                    <strong data-en="Professional Workshops in Python"
+                                        data-fr="Ateliers Professionnels en Python">Professional Workshops in
+                                        Python</strong>
+                                    <p>Numpy, Pandas, Matplotlib, Seaborn</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
-                <h3 data-en="Recent Publications" data-fr="Mes dernières Publications">Recent Publications</h3>
-                <ul class="publication-list">
-                    <li><strong>Ben Hamida S., Hmida H., Borgi A., Rukoz M.</strong> (2021) <a href="https://scholar.google.com/scholar?q=Adaptive+sampling+for+active+learning+with+genetic+programming+Sana+Ben+Hamida" target="_blank" rel="noopener noreferrer">Adaptive sampling for active learning with genetic programming</a>. <em>Cognitive Systems Research</em> 65, p 23-39.</li>
-                    <li><strong>Ben Hamida S., Benjelloun G., Hmida H.</strong> (2021) <a href="https://scholar.google.com/scholar?q=Trends+of+Evolutionary+Machine+Learning+to+Address+Big+Data+Mining+Sana+Ben+Hamida" target="_blank" rel="noopener noreferrer">Trends of Evolutionary Machine Learning to Address Big Data Mining</a>. <em>International Conference on Information and Knowledge Systems, 2021. Artificial Intelligence and Decision Making.</em> Lecture Notes in Business Information Processing, vol 425. Springer.</li>
-                    <li><strong>Ben M'barek M., Ben Hamida S., Borgi A., Rukoz M.</strong> (2021) <a href="https://scholar.google.com/scholar?q=GA-PPI-Net+Approach+vs+Analytical+Approaches+for+Community+Detection+in+PPI+Networks" target="_blank" rel="noopener noreferrer">GA-PPI-Net Approach vs Analytical Approaches for Community Detection in PPI Networks</a>. <em>Procedia Computer Science</em> 192, p 903-912.</li>
-                    <li><strong>Ben Hamida S., Benjelloun G.</strong> (2021) <a href="https://scholar.google.com/scholar?q=Extending+DEAP+with+Active+Sampling+for+Evolutionary+Supervised+Learning+Sana+Ben+Hamida" target="_blank" rel="noopener noreferrer">Extending DEAP with Active Sampling for Evolutionary Supervised Learning</a>. <em>ICSOFT 2021</em>, p 574-582.</li>
-                    <li><strong>Ben M'Barek M., Borgi A., Ben Hmida S., Rukoz M.</strong> (2020) <a href="https://scholar.google.com/scholar?q=Generic+GA-PPI-Net+Generic+Evolutionary+Algorithm+to+detect+semantic+and+topological+biological+communities" target="_blank" rel="noopener noreferrer">Generic GA-PPI-Net: Generic Evolutionary Algorithm to detect semantic and topological biological communities</a>. <em>15th International Conference on Software Technologies ICSOFT 2020</em>, p 295-306.</li>
-                    <li><strong>Bousselmi K., Ben Hamida S., Rukoz M.</strong> (2020) <a href="https://scholar.google.com/scholar?q=Bi-objective+CSO+for+Big+Data+Scientific+Workflows+scheduling+in+the+Cloud+LIGO" target="_blank" rel="noopener noreferrer">Bi-objective CSO for Big Data Scientific Workflows scheduling in the Cloud: case of LIGO workflow</a>. <em>5th International Conference on Software Technologies ICSOFT 2020</em>, p 615-624.</li>
-                </ul>
-
-                <!-- <h3>Full Publication List</h3>
-                <div class="publication-links">
-                    <p>For my complete list of publications, please visit:</p>
-                    <ul>
-                        <li><a href="https://scholar.google.com/citations?hl=en&user=YOUR_SCHOLAR_ID&view_op=list_works" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
-                        <li><a href="https://www.researchgate.net/profile/Sana-Ben-Hamida" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
-                        <li><a href="https://dblp.org/pid/b/Ben-HamidaSana.html" target="_blank" rel="noopener noreferrer">Computer Science Bibliography (DBLP)</a></li>
-                    </ul>
-                </div> -->
             </div>
         </section>
 
-        <section id="tutorials" class="card">
-            <h2 data-en="Tutorials & Presentations" data-fr="Tutoriaux & Exposés">Tutorials & Presentations</h2>
-            <div class="content">
-                <h3 data-en="Doctoral Course - LAMSADE 2019 (in English)" data-fr="Cours doctoral - LAMSADE 2019 (en)">Doctoral Course - LAMSADE 2019 (in English)</h3>
-                <ul>
-                    <li><span data-en="Chapter 1: Basic of Evolutionary Algorithms" data-fr="Chapitre 1 : Bases des Algorithmes Évolutionnaires">Chapter 1: Basic of Evolutionary Algorithms</span> - <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s" target="_blank" rel="noopener noreferrer" data-en="Slides" data-fr="Slides">Slides</a></li>
-                    <li><span data-en="Chapter 2: Continuous Evolutionary Algorithms" data-fr="Chapitre 2 : Algorithmes Évolutionnaires Continus">Chapter 2: Continuous Evolutionary Algorithms</span> - <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s" target="_blank" rel="noopener noreferrer" data-en="Slides" data-fr="Slides">Slides</a></li>
-                    <li><span data-en="Chapter 3: Extension of EA for multi-objective optimization" data-fr="Chapitre 3 : Extension des AE pour l'optimisation multi-objectif">Chapter 3: Extension of EA for multi-objective optimization</span> - <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s" target="_blank" rel="noopener noreferrer" data-en="Slides" data-fr="Slides">Slides</a></li>
-                    <li><span data-en="Chapter 4: Combinatorial Optimization" data-fr="Chapitre 4 : Optimisation Combinatoire">Chapter 4: Combinatorial Optimization</span> - <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s" target="_blank" rel="noopener noreferrer" data-en="Slides" data-fr="Slides">Slides</a></li>
-                    <li><span data-en="Chapter 5: Genetic Programming" data-fr="Chapitre 5 : Programmation Génétique">Chapter 5: Genetic Programming</span> - <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s" target="_blank" rel="noopener noreferrer" data-en="Slides" data-fr="Slides">Slides</a></li>
-                    <li><span data-en="Chapter 6: Solving machine learning problems with Genetic Programming" data-fr="Chapitre 6 : Résolution de problèmes de machine learning avec la Programmation Génétique">Chapter 6: Solving machine learning problems with Genetic Programming</span> - <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s" target="_blank" rel="noopener noreferrer" data-en="Slides" data-fr="Slides">Slides</a></li>
-                </ul>
+        <section id="contact" class="section bg-dark text-white">
+            <div class="container">
+                <div class="contact-wrapper fade-in-up">
+                    <div class="contact-info">
+                        <h2 data-en="Get In Touch" data-fr="Me Contacter">Get In Touch</h2>
+                        <p class="mb-4" data-en="Feel free to reach out for collaborations or questions."
+                            data-fr="N'hésitez pas à me contacter pour des collaborations ou des questions.">Feel free
+                            to reach out for collaborations or questions.</p>
 
-                <h3 data-en="Doctoriales LIPAH - Université de Tunis - May 2018" data-fr="Doctoriales LIPAH - Université de Tunis - mai 2018">Doctoriales LIPAH - Université de Tunis - May 2018</h3>
-                <p><span data-en="Genetic Programming for Machine Learning: Principles and Example of Application to Symbolic Regression in Finance" data-fr="La programmation génétique pour l'apprentissage automatique: principes et exemple d'application à la régression symbolique en finance">Genetic Programming for Machine Learning: Principles and Example of Application to Symbolic Regression in Finance</span> - <a href="https://sites.google.com/view/sanabenhamida/tutoriaux-et-expos%C3%A9s" target="_blank" rel="noopener noreferrer" data-en="Slides" data-fr="slides">Slides</a></p>
-            </div>
-        </section>
+                        <div class="contact-details">
+                            <div class="contact-point">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Université Paris Nanterre</h4>
+                                    <p>UFR SEGMI - Office E37</p>
+                                    <p>200 avenue de la République, 92000 Nanterre</p>
+                                </div>
+                            </div>
+                            <div class="contact-point">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Université Paris Dauphine - PSL</h4>
+                                    <p>LAMSADE - UMR CNRS 7243</p>
+                                    <p>Pl. du Maréchal de Lattre de Tassigny, 75016 Paris</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <section id="teaching" class="card">
-            <h2 data-en="Teaching" data-fr="Enseignement">Teaching</h2>
-            <div class="content">
-                <h3 data-en="Current Responsibilities" data-fr="Responsabilités actuelles">Current Responsibilities</h3>
-                <ul>
-                    <li data-en="Coordinator of Digital Competencies Teaching at SEGMI" data-fr="Coordinatrice des enseignements en Compétences Numériques à SEGMI">Coordinator of Digital Competencies Teaching at SEGMI</li>
-                    <li data-en="Pedagogical Director of Master 1 Data Science for Social Sciences, Innovation, Enterprise and Society track" data-fr="Responsable pédagogique du master 1 Data Science for Social Sciences, mention Innovation, Entreprise et Société">Pedagogical Director of Master 1 Data Science for Social Sciences, Innovation, Enterprise and Society track</li>
-                    <li data-en="Elected member of the Consultative Committee by Discipline, section 27" data-fr="Membre élu du comité consultatif par Discipline, section 27">Elected member of the Consultative Committee by Discipline, section 27</li>
-                </ul>
-
-                <p class="course-platform"><strong data-en="Note:" data-fr="Note :">Note:</strong> <span data-en="All course materials, tutorials, practical work, and quizzes are available on" data-fr="Tous mes supports de cours, TDs, TPs et QCMs sont disponibles sur">All course materials, tutorials, practical work, and quizzes are available on</span> <a href="https://coursenligne.parisnanterre.fr/" target="_blank" rel="noopener noreferrer">https://coursenligne.parisnanterre.fr/</a></p>
-
-                <h3 data-en="Current Courses" data-fr="Mes cours actuels">Current Courses</h3>
-
-                <h4 data-en="Master Data Science for Social Sciences, Innovation, Enterprise and Society track (D3S-IES)" data-fr="Master Data Science for Social Sciences, mention Innovation, Entreprise et Société (D3S-IES)">Master Data Science for Social Sciences, Innovation, Enterprise and Society track (D3S-IES)</h4>
-                <ul class="course-list">
-                    <li><strong data-en="M2: Advanced Machine Learning" data-fr="M2 : Approfondissement en Machine Learning">M2: Advanced Machine Learning</strong><br>
-                    <span data-en="Data cleaning; Data reduction; Data transformation; Ensemble Learning; Sampling; Bagging/Boosting; SVMs; Hierarchical clustering" data-fr="Data cleaning ; Data reduction ; data transformation; Ensemble Learning; Sampling; Bagging/Boosting; SVMs; Hierarchical clustering">Data cleaning; Data reduction; Data transformation; Ensemble Learning; Sampling; Bagging/Boosting; SVMs; Hierarchical clustering</span></li>
-                    <li><strong data-en="M1: Advanced Databases" data-fr="M1: Base de Données Avancées">M1: Advanced Databases</strong><br>
-                    <span data-en="Advanced SQL; Data Analysis by SQL; Data Control; Query Optimization; Indexing" data-fr="SQL Avancé ; Analyse des données par SQL ; Contrôle des données ; Optimisation des requêtes ; Indexation">Advanced SQL; Data Analysis by SQL; Data Control; Query Optimization; Indexing</span></li>
-                    <li><strong data-en="M1: Fundamentals of NoSQL Databases" data-fr="M1: Fondements des Base de Données NoSQL">M1: Fundamentals of NoSQL Databases</strong><br>
-                    <span data-en="Document Databases; JSON Format; Denormalization of RDB to Document Database; Querying Document DBs with MongoDB; Graph Databases; Querying Graph Databases; Neo4j" data-fr="Bases documentaires; Format Json ; Dénormalisation des BDR en base documentaire; Interrogation des BD documentaires avec MongoDB, BD graphe; Interrogation des BD graphes; Neo4j">Document Databases; JSON Format; Denormalization of RDB to Document Database; Querying Document DBs with MongoDB; Graph Databases; Querying Graph Databases; Neo4j</span></li>
-                </ul>
-
-                <h4 data-en="Master Computer Science Methods Applied to Business Management (MIAGE)" data-fr="Master Méthodes informatiques appliquées à la gestion des entreprises (MIAGE)">Master Computer Science Methods Applied to Business Management (MIAGE)</h4>
-                <ul class="course-list">
-                    <li><strong data-en="M2: Application of Machine Learning" data-fr="M2: Application du Machine Learning">M2: Application of Machine Learning</strong><br>
-                    <span data-en="Supervised-Unsupervised Learning; Classification; Regression; Clustering; Data Preparation; Model Evaluation and Selection" data-fr="Apprentissage supervisé-non supervisé ; classification ; régression ; clustering ; préparation des données ; évaluation et sélection de modèles">Supervised-Unsupervised Learning; Classification; Regression; Clustering; Data Preparation; Model Evaluation and Selection</span></li>
-                </ul>
-
-                <h4 data-en="Master Economic Analysis and Policy (APE)" data-fr="Master Analyse et Politique Economiques (APE)">Master Economic Analysis and Policy (APE)</h4>
-                <ul class="course-list">
-                    <li><strong data-en="M2: Professional Workshops in Python" data-fr="M2: Ateliers Professionnels en Python">M2: Professional Workshops in Python</strong><br>
-                    <span data-en="Data Analysis with Numpy and Pandas libraries; Visualization and Graphs with Matplotlib and Seaborn" data-fr="Analyse des données avec les bibliothèques Numpy et Pandas ; Visualisation et graphes avec Matplotlib et Seaborn">Data Analysis with Numpy and Pandas libraries; Visualization and Graphs with Matplotlib and Seaborn</span></li>
-                    <li><strong data-en="M1: Software and Programming (Python)" data-fr="M1: Logiciels et Programmation (Python)">M1: Software and Programming (Python)</strong><br>
-                    <span data-en="Python Programming; Numerical Computing with Numpy; Graphics with Matplotlib" data-fr="Programmation Python ; Calcul numérique avec Numpy, Graphiques avec Matplotlib">Python Programming; Numerical Computing with Numpy; Graphics with Matplotlib</span></li>
-                </ul>
-
-                <h4 data-en="Master Statistics and Economics of Finance, Insurance and Risk (ISEFAR)" data-fr="Master Statistique et Economique de la Finance, de l'Assurance et du Risque (ISEFAR)">Master Statistics and Economics of Finance, Insurance and Risk (ISEFAR)</h4>
-                <ul class="course-list">
-                    <li><strong data-en="Databases" data-fr="Base de Données">Databases</strong><br>
-                    <span data-en="Relational Model; SQL Language (DDL/DML/DCL); Multi-table Queries for Interrogation and Analysis; Forms; Reporting" data-fr="Le modèle relationnel, le langage SQL (LID/LMD/LDD) ; les requêtes multi-tables d'interrogation et d'analyse ; les formulaires ; le reporting">Relational Model; SQL Language (DDL/DML/DCL); Multi-table Queries for Interrogation and Analysis; Forms; Reporting</span></li>
-                </ul>
-
-                <h4 data-en="Master Economic and Social Sciences (SES)" data-fr="Master Sciences Economiques et Sociales (SES)">Master Economic and Social Sciences (SES)</h4>
-                <ul class="course-list">
-                    <li><strong data-en="Excel/VBA Programming" data-fr="Programmation Excel/VBA">Excel/VBA Programming</strong><br>
-                    <span data-en="Data Management with Excel (Control, Interrogation and Analysis); Excel Database Functions; Worksheet Control Objects; Forms; Imperative/Event-driven and Object Programming with VBA" data-fr="Gestion des données avec Excel (contrôle, interrogation et analyse), Les fonctions BD d'Excel ; Les objets de contrôle su feuille; Les formulaires ; la programmation impérative/évènementielle et Objet par VBA">Data Management with Excel (Control, Interrogation and Analysis); Excel Database Functions; Worksheet Control Objects; Forms; Imperative/Event-driven and Object Programming with VBA</span></li>
-                </ul>
-
-                <h4 data-en="Bachelor in Management (L3 Apprenticeship)" data-fr="Licence Gestion (L3 Apprentissage)">Bachelor in Management (L3 Apprenticeship)</h4>
-                <ul class="course-list">
-                    <li><strong data-en="Introduction to DB and IS1" data-fr="Introduction aux BD et SI1">Introduction to DB and IS1</strong><br>
-                    <span data-en="Data Management with Excel; Excel Database Functions; Imperative/Event-driven and Object Programming with VBA; Forms under Excel" data-fr="Gestion des données avec Excel, Les fonctions BD d'Excel ; la programmation impérative/évènementielle et Objet par VBA ; Les formulaires sous Excel">Data Management with Excel; Excel Database Functions; Imperative/Event-driven and Object Programming with VBA; Forms under Excel</span></li>
-                    <li><strong data-en="Introduction to DB and IS2" data-fr="Introduction aux BD et SI2">Introduction to DB and IS2</strong><br>
-                    <span data-en="Migration from Excel to ACCESS; Interrogation and Update Queries; Forms and Reports under ACCESS; Macros" data-fr="Migration d'Excel à ACCESS ; les requêtes d'interrogation et de mise à jour ; Les formulaires et états sous ACCESS ; Les macros">Migration from Excel to ACCESS; Interrogation and Update Queries; Forms and Reports under ACCESS; Macros</span></li>
-                </ul>
-
-                <h4 data-en="Bachelor MIASH L2" data-fr="Licence MIASH L2">Bachelor MIASH L2</h4>
-                <ul class="course-list">
-                    <li><strong data-en="Introduction to Databases" data-fr="Introductions aux Bases de Données">Introduction to Databases</strong><br>
-                    <span data-en="Relational Model; Integrity of Relational Databases; SQL Language (DDL/DML/DCL); Forms" data-fr="Le modèle relationnel ; L'intégrité des BD relationnels ; le langage SQL (LID/LMD/LDD) ; Les formulaires">Relational Model; Integrity of Relational Databases; SQL Language (DDL/DML/DCL); Forms</span></li>
-                    <li><strong data-en="Relational Databases 2" data-fr="Bases de Données Relationnelles 2">Relational Databases 2</strong><br>
-                    <span data-en="Entity/Association Model; Normalization of RDB; Advanced SQL: Different Types of Joins; Composite Queries and Subqueries; Views; Domain Functions" data-fr="Le modèle Entité/Association ; La normalisation des BDR ; SQL avancé : les différents types de jointures ; les requêtes composées et les sous-requêtes ; les vues ; les fonctions de domaines">Entity/Association Model; Normalization of RDB; Advanced SQL: Different Types of Joins; Composite Queries and Subqueries; Views; Domain Functions</span></li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact" class="card">
-            <h2 data-en="Contact Information" data-fr="Informations de contact">Contact Information</h2>
-            <div class="content">
-                <div class="contact-item">
-                    <h3>Université Paris Nanterre</h3>
-                    <p>UFR SEGMI - Office E37 - Allais Building</p>
-                    <p>200 avenue de la République</p>
-                    <p>92000 Nanterre, France</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Université Paris Dauphine - PSL</h3>
-                    <p>LAMSADE - UMR CNRS 7243</p>
-                    <p>Pl. du Maréchal de Lattre de Tassigny</p>
-                    <p>75016 Paris, France</p>
+                    <div class="contact-visual">
+                        <div class="circle-decoration"></div>
+                        <i class="fas fa-envelope-open-text big-icon"></i>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Sana Ben Hamida. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
-        <p><a href="https://orcid.org/0000-0003-4202-613X" target="_blank" rel="noopener noreferrer" data-en="ORCID Profile" data-fr="Profil ORCID">ORCID Profile</a> | <a href="https://sites.google.com/view/sanabenhamida/accueil" target="_blank" rel="noopener noreferrer" data-en="Original Website" data-fr="Site Web Original">Original Website</a></p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    SBH<span class="dot">.</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://orcid.org/0000-0003-4202-613X" target="_blank" data-en="ORCID Profile"
+                        data-fr="Profil ORCID">ORCID Profile</a>
+                    <a href="https://sites.google.com/view/sanabenhamida/accueil" target="_blank"
+                        data-en="Original Website" data-fr="Site Web Original">Original Website</a>
+                </div>
+                <p class="copyright">&copy; 2025 Sana Ben Hamida. <span data-en="All rights reserved."
+                        data-fr="Tous droits réservés.">All rights reserved.</span></p>
+            </div>
+        </div>
     </footer>
-    <script src="language.js"></script>
-</body>
-</html>
 
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
